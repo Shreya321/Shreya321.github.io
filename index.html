@@ -52,6 +52,13 @@
                 color: white;
                 text-align: center;
             }
+            #LoginPage {
+                "font-family:verdana Ms;
+                text-align= "center";
+                font-size:50pt;
+                color: red;
+                background-color:
+            }
         </style>
     </head>
     <body>
@@ -80,8 +87,8 @@
           <td>debut album by the band; heartfelt and soulful vocals; pop-rock theme; a few rock songs</td>
         </tr>
         <tr>
-            <td><a href = "#WakingUp"><em>Waking Up</em></a></td>
-            <td><a href = "#WakingUp"><img src = "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/OneRepublic_Waking_Up_cover.png/220px-OneRepublic_Waking_Up_cover.png" alt = "Waking Up Album" width = "150"/></a></td>
+            <td><a href = "#LoginPage"><em>Waking Up</em></a></td>
+            <td><a href = "#LoginPage"><img src = "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/OneRepublic_Waking_Up_cover.png/220px-OneRepublic_Waking_Up_cover.png" alt = "Waking Up Album" width = "150"/></a></td>
             <td>rock theme, lyrical songs, released in 2009</td>
         </tr>
         <tr>
@@ -96,10 +103,33 @@
         </tr>
     </tbody>
     </table>
-    <h3 id = "WakingUp"><em>WAKING UP</em></h3>
-        <h4 id = "songs" >Second Studio Album by One Republic</h4>
+<h3 id = "LoginPage">
+Simple Login Page
+</h3>
+<form name="login">
+Username<input type="user" name="userid"/>
+Password<input type="password" name="pswrd"/>
+<input type="button" onclick="check(this.form)" value="Login"/>
+<input type="reset" value="Cancel"/>
+</form>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "user" && form.pswrd.value == "password")
+  {
+    window.open('https://shreya321.github.io/#WakingUp')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
+    <h4 id = "WakingUp"><em>WAKING UP</em></h4>
+        <h5 id = "songs" >Second Studio Album by One Republic</h5>
         <img id = "songs" src = "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/OneRepublic_Waking_Up_cover.png/220px-OneRepublic_Waking_Up_cover.png" alt = "Waking Up Album" width = "350"/>
-        <h5 id = "songs"><strong>SONG LIST</strong></h5>
+        <h6 id = "songs"><strong>SONG LIST</strong></h6>
         <p id = "songs">
             "Made For You" <br>
             "All the Right Moves" <br>
