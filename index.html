@@ -3,7 +3,14 @@
     <head>
         <meta charset="utf-8">
         <title>One Republic Fan Page</title>
-        <style>
+<script>
+function show(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  return false;
+}
+</script>
+<style>
             body {
                 text-align: center;
                 color: white;
@@ -59,10 +66,12 @@
                 color: red;
                 background-color:
             }
-        </style>
-    </head>
-    <body>
-        <h1><a href = "https://shreya321.github.io/">Home</a> <a href = "#LoginPage"> New Music</a></H1>
+</style>
+</head>
+<body>
+
+  <div id="Page1">
+    <h1><a href = "https://shreya321.github.io/">Home</a> <a href = "#LoginPage"> New Music</a></H1>
         <h2>ONE REPUBLIC</h2>
         <img src = "https://tinyurl.com/onerepubimg1" alt = "One Republic Image" width= "1500"/>
         <p id = "bandInfo">One Republic is an American pop-rock band, founded in Colorado Springs in 2002.
@@ -126,9 +135,10 @@ function check(form)/*function to check userid & password*/
   }
 }
 </script>
-<p id = "LoginPage">
-    
-</p>
+    <a href="#" onclick="return show('Page2','Page1');">Album Page</a>
+  </div>
+
+  <div id="Page2" style="display:none">
     <h4 id = "WakingUp"><em>WAKING UP</em></h4>
         <h5 id = "songs" >Second Studio Album by One Republic</h5>
         <img id = "songs" src = "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/OneRepublic_Waking_Up_cover.png/220px-OneRepublic_Waking_Up_cover.png" alt = "Waking Up Album" width = "350"/>
@@ -146,6 +156,8 @@ function check(form)/*function to check userid & password*/
             "Marching On" <br>
             "Lullaby" 
         </p>
-    </body>
-</html>
+    <a href="#" onclick="return show('Page1','Page2');">Home Page</a>
+  </div>
 
+</body>
+</html>
