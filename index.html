@@ -66,6 +66,16 @@ function show(shown, hidden) {
                 color: red;
                 background-color:
             }
+            #Album {
+    	        background-color: black;
+                color: yellow;
+                font-size: 30px;
+            }
+            #Album2 {
+     	        background-color: black;
+                color: yellow;
+    	        font-size: 50px;
+            }
 </style>
 </head>
 <body>
@@ -152,6 +162,25 @@ function check(form)/*function to check userid & password*/
             "Marching On" <br>
             "Lullaby" 
         </p>
+    
+    <p id = "Album2">Select your favorite album:</p>
+<form action="/action_page.php" id = "Album">
+  <input type="radio" name="browser" onclick="myFunction(this.value)" value="Dreaming Out Loud">Dreaming Out Loud<br>
+  <input type="radio" name="browser" onclick="myFunction(this.value)" value="Waking Up">Waking Up<br>
+  <input type="radio" name="browser" onclick="myFunction(this.value)" value="Native">Native<br>
+  <input type="radio" name="browser" onclick="myFunction(this.value)" value="Oh My My">Oh My My<br>
+  <input type="radio" name="browser" onclick="myFunction(this.value)" value="None">None of these<br><br>
+
+  Your favorite album is <input type="text" id="result">
+  <input type="submit" value="Submit form">
+</form>
+
+<script id = "Album2">
+function myFunction(browser) {
+    document.getElementById("result").value = browser;
+}
+</script>
+
 
 </body>
 </html>
